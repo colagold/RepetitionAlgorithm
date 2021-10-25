@@ -49,7 +49,7 @@ class PMF():
         '''
         axis= 0 对a的横轴进行操作，在运算的过程中其运算的方向表现为纵向运算,axis= 1 对a的纵轴进行操作，在运算的过程中其运算的方向表现为横向运算
         '''
-        preds_value_array = np.sum(u_features*v_features, 1) # 计算预测的R,u_features*v_features是NxM维，横向求和之后是Nx1维度
+        preds_value_array = np.sum(u_features*v_features, 1) # 计算预测的评分,u_features*v_features是NxM维，横向求和之后是Nx1维度
         return preds_value_array
 
     def train(self, train_data=None, vali_data=None):
